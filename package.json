@@ -1,0 +1,36 @@
+{
+  "name": "certificate-converter",
+  "version": "1.0.0",
+  "description": "Hypergate Certificate Converter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack-dev-server --watch --open --mode=development",
+    "build": "webpack --mode=production",
+    "setup-deploy": "rm -rf dist/ && mkdir -p dist && git clone git@github.com:papers-ch/hypergate-certificate-converter.git --branch gh-pages dist",
+    "deploy": "npm run build && cd dist && git add --all && git commit -m \"Release at $(date)\" && git push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "element-ui": "^2.4.7",
+    "vue": "^2.5.17",
+    "webpack": "^4.20.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
+    "@babel/preset-env": "^7.1.0",
+    "babel-loader": "^8.0.2",
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
